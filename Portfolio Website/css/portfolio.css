@@ -1,0 +1,232 @@
+body {
+    margin: 0%
+}
+/*showcase nav, how it's displayed*/
+.nav {
+    overflow: hidden;
+    background-color: blueviolet;
+    position: fixed; 
+    top: 0%;
+    width: 100%; 
+    z-index: 1; 
+    margin-top: 0%;
+    animation: moveNav 2s; 
+}
+
+@keyframes moveCodeText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/*nav elements (home, contact, etc.)*/
+.nav a {
+    float: left; 
+    display: block;
+    color: rgb(245, 181, 18);
+    padding: 14px 16px; 
+    text-decoration: none; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    position: relative; 
+    animation: moveNavText 5.75s;
+ 
+}
+
+@keyframes moveNavText {
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
+}
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .nav a{
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
+}
+/*nav hover elements*/
+.nav a:hover {
+    background-color: snow; 
+    color: black; 
+    font-weight: bold; 
+}
+/*end of nav section*/
+
+#Code_Video {
+    position: fixed; 
+    right: 0; 
+    bottom: 0; 
+    min-width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+    #Code_Video {
+        display: none; 
+    }
+}
+
+.Code_Text {
+    background: rgba(0,0,0, 0.5); 
+    color: white; 
+    width: 100%;
+    padding: 19px; 
+    position: relative; 
+    -webkit-animation: movieVideoText 5.75s; 
+    animation: moveVideoText 5.75s; 
+}
+
+@keyframes moveCodeText {
+    from {top: -100vw;}
+    to {top:0vw;}
+}
+
+/*GITHUB SECTION*/
+.Col_A {
+    float:left; 
+    width: 50%;
+    padding: 5px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: snow; 
+
+}
+
+/*@media screen and (max-width: 576px){
+    .Col_A {
+        overflow: hidden; 
+    }
+}*/
+
+.Col_B {
+    float:left; 
+    width: 50%; 
+    padding: 5px; 
+    padding-top: 1.9%; 
+    height: 400px;
+    background-color: grey; 
+}
+
+/*no content displayed afterwards*/
+.rows:after{
+    content: "";
+    display: table;
+    clear: both; 
+}
+/*END OF GITHUB SECTION*/
+
+/*regular element styling h1, p, etc*/
+h1 {
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center; 
+    margin-top: 3%;
+    color: #1a1a1a; 
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s; 
+}
+
+.white-text {
+    color: #fff;
+}
+
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify; 
+    letter-spacing: 1px; 
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+
+p:hover {
+    transition: transform 1st;
+    transform: scale(1.01); 
+}
+
+.center {
+    text-align: center; 
+}
+
+.center:hover {
+    transition: transform 2s; 
+    transform: scale (1.1);
+}
+
+a {
+    color: black; 
+}
+
+img {
+    border-radius: 8px; 
+    max-width: 100%;
+    height: 340px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+/*hover effect
+transform scale makes the image bigger if you move the mouse over it*/
+img:hover{
+    transition: transform 1s; 
+    transform: scale(1.1);
+}
+
+/* to fit screens 576px and smaller */
+@media screen and (max-width: 576px) {
+    img{
+        height: 100px;
+        margin-top: 150px; 
+}
+
+}
+
+/*CONTACT FORM */
+
+.Col_Tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*hover effect*/
+input[type=text] {
+    box-shadow: 0 0 5px #00004d inset; 
+}
+
+input[type=submit] {
+    background-color: black; 
+    color: white; 
+    font-weight: bold; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*footer*/
+footer {
+    padding: 1.3%; 
+    background-color: blueviolet; 
+}
+
