@@ -1,0 +1,458 @@
+body {
+    margin: 0%;
+    opacity: 1; 
+    transition: 3s opacity; 
+    letter-spacing: .2vw; 
+    font-family: Avant Garde, Helvetica; 
+    font-size: 1.5vw; 
+    overflow-x: hidden; 
+    user-select: none; 
+
+}
+
+body.fade-out {
+    opacity: .1; 
+}
+/*affects everything 
+makes sure page scrolling is smooth*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*showcase nav, how it's displayed*/
+.nav {
+    overflow: hidden;
+    background-color: blueviolet;
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    z-index: 1; 
+    margin-top: 0%;
+    animation: moveNav 2s; 
+}
+
+@keyframes moveCodeText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/*nav elements (home, contact, etc.)*/
+.nav a {
+    float: left; 
+    display: block;
+    color: rgb(240, 233, 241);
+    padding: .75vw 1vw; 
+    text-decoration: none; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw; 
+    text-align: center; 
+    position: relative; 
+    animation: moveNavText 5.75s;
+ 
+}
+
+@keyframes moveNavText {
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
+}
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .nav a{
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
+}
+/*nav hover elements*/
+.nav a:hover {
+    background-color: snow; 
+    color: black; 
+    font-weight: bold; 
+}
+/*end of nav section*/
+
+/*nav home button */
+.nav a.active {
+    background-color: gray;
+}
+
+#Code_Video {
+    position: fixed; 
+    right: 0; 
+    bottom: 0; 
+    min-width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+    #Code_Video {
+        display: none; 
+    }
+}
+
+.Code_Text {
+    background: rgba(0,0,0, 0.5); 
+    color: white; 
+    width: 100%;
+    padding: 19px; 
+    position: relative; 
+    -webkit-animation: movieVideoText 5.75s; 
+    animation: moveVideoText 5.75s; 
+}
+
+@keyframes moveCodeText {
+    from {top: -100vw;}
+    to {top:0vw;}
+}
+
+/*GITHUB SECTION*/
+.Col_A {
+    float:left; 
+    width: 50%;
+    padding: 1.6px;
+    height: 450px;
+    background-color: snow; 
+
+}
+
+/*@media screen and (max-width: 576px){
+    .Col_A {
+        overflow: hidden; 
+    }
+}*/
+
+.Col_B {
+    float:left; 
+    width: 50%; 
+    padding: 1.6px; 
+    height: 450px;
+    background-color: black; 
+}
+
+/*no content displayed afterwards*/
+.rows:after{
+    content: "";
+    display: table;
+    clear: both; 
+}
+/*END OF GITHUB SECTION*/
+
+/*regular element styling h1, p, etc*/
+h1 {
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center; 
+    margin-top: 3%;
+    color: #1a1a1a; 
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s; 
+}
+
+.white-text {
+    color: #fff;
+    padding-top: 10vh; 
+}
+
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify; 
+    letter-spacing: 1px; 
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+
+p:hover {
+    transition: transform 1st;
+    transform: scale(1.01); 
+}
+
+.center {
+    text-align: center; 
+}
+
+.center:hover {
+    transition: transform 2s; 
+    transform: scale (1.1);
+}
+
+a {
+    color: black; 
+    cursor: pointer; 
+    text-decoration: underline; 
+}
+
+img {
+    border-radius: 8px; 
+    width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    
+}
+
+/*hover effect
+transform scale makes the image bigger if you move the mouse over it*/
+img:hover{
+    transition: transform 1s; 
+    transform: scale(1.1);
+}
+
+/* to fit screens 576px and smaller */
+@media screen and (max-width: 576px) {
+    img{
+        height: 100px;
+        margin-top: 150px; 
+}
+
+}
+
+/*CONTACT FORM */
+
+.Col_Tall {
+    padding-top: 3.5%;
+    height: 350px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*hover effect*/
+input[type=text] {
+    box-shadow: 0 0 5px #00004d inset; 
+}
+
+input[type=submit] {
+    background-color: black; 
+    color: white; 
+    font-weight: bold; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*footer*/
+footer {
+    padding: .1%; 
+    background-color: blueviolet;
+}
+
+/* SLIDESHOW STYLING */
+#Slideshow_Background {
+    /*creates a slightly transparent white background placed over
+    the video in the background*/
+    background: rgba (255, 255, 255, 0.35); 
+}
+
+.mySlides {
+    display: none; /*this prevents the images from being 
+    displayed. JS will display these*/
+}
+
+/*slide show section/container*/
+#Slideshow_Container {
+    width: 39.5vw; /*relative sizing of the container for slideshow
+    set to this number*/
+    height: auto; 
+    padding-top: 4%;
+    position: relative; 
+    margin: auto; 
+}
+
+.Slideshow_Images {
+    vertical-align: middle;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    
+}
+
+.Previous, .Next {
+    cursor: pointer; 
+    position: absolute; 
+    top: 50%; 
+    width: auto; 
+    padding: 2vw; 
+    color: darkgray; 
+    font-weight: bold; 
+    font-size: 1.5vw; 
+    border-radius: 0 3px 3px 0; 
+    user-select: none; 
+    transition: 0.6s ease; 
+}
+
+/*positioning the next button on the right hand side*/
+.Next {
+    right: 0; 
+    border-radius: 3px 0 0 3px; 
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+}
+
+.text {
+    color: white; 
+    padding: absolute;
+    bottom: 0; 
+    width: 100%; 
+    text-align: center; 
+    font-family: Perpetua, Rockwell Extra Bold; 
+    letter-spacing: .1vw; 
+    font-size: 1.5vw; 
+    background-color: rgba (0, 0, 0, 0.75); 
+    font-weight: bold; 
+    border-radius: 0px 0px 7px 7px; 
+}
+
+.dot {
+    cursor: pointer; 
+    height: 1vw; 
+    width: 1vw; 
+    margin: .25vw; 
+    background-color: white; 
+    border-radius: 50%; 
+    display: inline-block; 
+    transition: background-color 0.6s ease; 
+    z-index: 1; 
+}
+
+/*slidehow dot hover effect*/
+.active, .dot:hover {
+    background-color: black; 
+}
+
+/*fade animation show*/
+.fade {
+    animation-name: fade; 
+    animation-duration: 1.5s; 
+    -webkit-animation-name: fade; 
+    -webkit-animatiion-duration: 1.5s; 
+}
+
+/*makes images start off transparent*/
+@-webkit-keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+/*END OF SLIDESHOW STYLING*/
+
+/*CONTACT FORM BUTTON */
+.Pop_Up_Button {
+    position: fixed; 
+    bottom: 1.75vw; 
+    right: 1.75vw; 
+    width: 25vw; 
+    background-color: white; 
+    color: black; 
+    border: solid black; 
+    cursor: pointer; 
+    -webkit-animation: movePopup 5s; 
+    animation: movePopup 5s; 
+}
+/*moves the button from off the right side of the screen*/
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 1.75vw;}
+}
+
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 1.75vw;}
+}
+
+/*styling for contact form*/
+.form-popup {
+    border: 3px solid #f0f1f0; 
+    z-index: 8; 
+    display: none; 
+    position: fixed; 
+    bottom: .5vw;
+    right: .5vw; 
+}
+
+.form-container {
+    max-width: 49vw; 
+    padding: 1vw; 
+    background-color: white; 
+}
+
+.form-container input[type=text] {
+    width: 100%; 
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0; 
+    border: none; 
+    background: Gainsboro; 
+    font-size: 1vw; 
+}
+
+button {
+    font-family: "Trebuchet MS", Optima; 
+    letter-spacing: .3vw; 
+    font-size: 1.5vw; 
+    font-weight: bold; 
+    padding: 1.5vw; 
+    cursor: pointer; 
+    width: 100%;
+    height: auto; 
+}
+
+button:hover, .form-container .btn:hover {
+    color: white; 
+    background-color: black; 
+    transition-duration: 1s; 
+    border-color: silver; 
+}
+
+.form-container .btn {
+    background-color: white; 
+    color: black; 
+    border-color: black;
+    margin-bottom: 1vh; 
+}
+/*close button styling*/
+.form-container .cancel {
+    background-color: black; 
+    color: white; 
+    border-color: gray; 
+}
+
+.form-container .cancel:hover {
+    color: white; 
+    background-color: purple;
+    transition-duration: 1s; 
+    -webkit-transition-duration: 1s;
+    border-color: black; 
+}
+
+/*end of close button stying*/
+
+
