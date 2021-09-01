@@ -46,8 +46,9 @@ function showSlides (n) {
         dots[i].className = dots[i].className.replace("active", ""); //this for loop
         //takes each item in the arrays dots and removes "active" which removes the active
         //styling 
+    }
         slides[slideIndex - 1].style.display ="block";//this displays the image in the slideshow
         dots[slideIndex - 1].className +=" active";
         //this adds active styling to the dot associated with the image
-    }
+
 }
